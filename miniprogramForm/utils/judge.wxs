@@ -1,0 +1,29 @@
+// var db = wx.cloud.database();
+// var form_lists = db.collection('userForms');
+var judge = {
+  getInputValue:function(event1,event2){
+    return event2[event1];
+  },
+  judgeRadioButton:function(event,options){
+    // var arr = options[event];
+    // console.log(arr)
+    // console.log(opt)
+    // console.log(event)
+    console.log(options)
+    // console.log(options.event)
+    // console.log(options[event])
+    if(options.toString().indexOf(event)!=-1){
+      return true;
+    }else{
+      return false;
+    }
+  },
+  judgeCheckBox:function(event){
+
+  }
+};
+module.exports = {
+  getInputValue:judge.getInputValue,
+  judgeRadioButton:judge.judgeRadioButton,
+  judgeCheckBox:judge.judgeCheckBox
+}

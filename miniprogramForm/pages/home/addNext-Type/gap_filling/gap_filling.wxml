@@ -1,0 +1,9 @@
+<!--pages/home/addNext-Type/radio_button/radio_button.wxml-->
+<view class="container">
+	<text>标题</text>
+	<view class="section input_title">
+		<input value="{{value}}" bindinput="getInputVal" placeholder="请输入题目名称" focus/>
+	</view>
+
+	<button catchtap="add_gapFilling">确定</button>
+</view>

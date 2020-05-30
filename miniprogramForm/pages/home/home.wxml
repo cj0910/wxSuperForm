@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+	<view class="home-container">
+		<view class="home-item-data" catchtap="directionTap">
+			<image class="item-logo" src="../../images/logo1.png"></image>
+			<text class="item-detail">去向登记表</text>
+		</view>
+	</view>
+	<view class="home-container">
+		<view class="home-item-data" catchtap="studentInfoTap">
+			<image class="item-logo" src="../../images/logo1.png"></image>
+			<text class="item-detail">资料收集表</text>
+		</view>
+	</view>
+	<view class="home-container">
+		<view class="home-item-data" catchtap="activityTap">
+			<image class="item-logo" src="../../images/logo1.png"></image>
+			<text class="item-detail">活动报名表</text>
+		</view>
+	</view>
+	<view class="home-container">
+		<view class="home-item-data" catchtap="questionnaireTap">
+			<image class="item-logo" src="../../images/logo1.png"></image>
+			<text class="item-detail">问卷调查表</text>
+		</view>
+	</view>
+	<view class="home-item-newBlankItem" catchtap="newFormTap">
+			<text class="newItem-detail">+  创建空白表单</text>
+		</view>
+
+</view>

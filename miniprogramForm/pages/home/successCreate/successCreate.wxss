@@ -1,0 +1,40 @@
+/* miniprogramForm/pages/home/successCreate/successCreate.wxss */
+/* .container{
+  height: 100%;
+  padding: 13rpx;
+  background-color: #f8f8f8;
+} */
+
+.form-title{
+  margin-top: 8px;
+  margin-bottom: 50px;
+}
+.enterFormList{
+  position: relative;
+  float: right;
+  margin-left: auto;
+  padding: 10px;
+  background-color: #004aad;
+  color: #fff;
+}
+.share-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.share-footer{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 10px;
+}
+.share-footer button{
+  width: 140px;
+  height: 50px;
+}
+.share{
+  background-color: #004aad;
+  color: white;
+}

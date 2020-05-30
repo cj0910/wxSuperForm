@@ -1,0 +1,6 @@
+<!--miniprogramForm/pages/userSuccessSubmit/userSuccessSubmit.wxml-->
+<view class="container">
+  <view class="txt">您已经成功提交！</view>
+	<view class="txt">感谢您的参与！</view>
+  <button class="returnHome" bindtap="returnHome">返回首页</button>
+</view>

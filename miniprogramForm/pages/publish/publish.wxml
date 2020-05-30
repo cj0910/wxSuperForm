@@ -1,0 +1,49 @@
+<view class="container">
+	<view class="dataStatistics">
+		<view style="text-align:center;margin-bottom:5px">数据统计</view>
+		<view class="StatisticsContainer">
+			<view class="Statistics" bindtap="formNumber">
+				<view class="statisticsTitle">表单数量（个）</view>
+				<view>{{formNo}}</view>
+			</view>
+			<view class="Statistics" bindtap="formAnswers">
+				<view class="statisticsTitle">答卷总数（份）</view>
+				<view>{{answerNo}}</view>
+			</view>
+		</view>
+	</view>
+	<view>{{nickName}}的表单</view>
+	<block wx:if="{{ forms.length }}">
+		<block wx:for="{{ forms }}" wx:key="index">
+			<navigator url="../showingForms/showingForms?id={{item._id}}">
+				<view class="forms-item">
+					<!-- <view class="form-title"> {{item.form.form_title}} </view> -->
+					<view class="form-Title">
+						<view class="form-title"> {{item.formTitle}} </view>
+						<!-- <button class="deleteForm" catchtap="onDeleteForm" data-id="{{item._id}}">删除</button> -->
+						<view class="deleteForm" catchtap="onDeleteForm" data-id="{{item._id}}">
+							<image src="../../images/delete.png" style="width:15px;height:15px" data-id="{{item._id}}"></image>
+						</view>
+					</view>
+					<view class="form-Info">
+						<view class="form-answer">{{item.formAnswers}}人已填</view>
+						<view class="date">{{ item.createTime }} 发布</view>
+						<button class="share-button" open-type="share" catchtap="onShareUsers" data-id="{{item._id}}">邀请填写</button>
+					</view>
+					<view wx:if="{{isHide}}" class="form-edit">
+						<label class="previewForm">查看</label>
+						<label class="editForm">编辑</label>
+						<label class="deleteForm">删除</label>
+					</view>
+				</view>
+			</navigator>
+
+		</block>
+	</block>
+	<block wx:else>
+		<view class="empty">
+			<text class="title">暂无表单创建记录</text>
+			<text class="content">请您前往「首页」添加新表单</text>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,83 @@
+/* pages/write/write.wxss */
+.forms-item {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.form-Title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.form-title{
+  font-size: 30rpx;
+  font-weight: 500;
+  padding-top: 5px;
+  padding-bottom: 7px;
+}
+.deleteForm{
+  width: 50px;
+  height: 30px;
+  float: right;
+  font-size: 30rpx;
+  font-weight: 500;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  margin-right: 2px;
+}
+.form-Info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 2px;
+}
+.previewForm{
+  font-size: 20rpx;
+  padding-top: 5px;
+  margin-right: 8px;
+}
+.previewForm button{
+  font-size: 22rpx;
+  background-color: rgba(33, 116, 211, 0.795);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.date {
+  font-size: 18rpx;
+  border-left: 8rpx solid #7ED321;
+  padding-left: 10rpx;
+  margin-top: 30rpx;
+}
+.share-button{
+  float: right;
+  padding: 2px;
+  font-size: 10px;
+  margin-right: 2px;
+  margin-top: 3px;
+  margin-left: auto;
+}
+.share-button button{
+  font-size: 22rpx;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.empty .title {
+  font-size: 60rpx;
+  margin: 200rpx 50rpx 50rpx;
+  color: #9B9B9B;
+}
+.empty .content {
+  color: #DDD;
+  text-align: center;
+}
+

@@ -1,0 +1,113 @@
+{
+	"description": "项目配置文件",
+	"miniprogramRoot": "miniprogramForm/",
+	"cloudfunctionRoot": "cloudFunctions/",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wx92298dc3dfe14259",
+	"projectname": "Form-Hand",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/activity-form/activity-form",
+					"pathName": "pages/home/activity-form/activity-form",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/direction-form/direction-form",
+					"pathName": "pages/home/direction-form/direction-form",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/home/successCreate/successCreate",
+					"pathName": "pages/home/successCreate/successCreate",
+					"query": "formId=b05d218a5ec67e130003bada75609d60",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/write/write",
+					"pathName": "pages/write/write",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/showingForms/showingForms",
+					"pathName": "pages/showingForms/showingForms",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/publish/answersForm/answersForm",
+					"pathName": "pages/publish/answersForm/answersForm",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

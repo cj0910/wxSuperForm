@@ -1,0 +1,43 @@
+page{
+  height: 100%;
+}
+.container{
+  background-color: #f8f8f8;
+  padding: 10px 5px;
+  margin-bottom: 100rpx;
+}
+
+.form-title{
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 10rpx 30rpx 20rpx 20rpx;
+}
+.form-title text{
+  padding: 15px 0px;
+  border-bottom: 0.5px solid #bbb;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  /* background-color: #fff; */
+  /* border-radius: 8px; */
+  padding: 15rpx;
+}
+
+.partingLine{
+  background-color: #f8f8f8;
+  margin-top: 8px;
+}
+.answer_title{
+  font-size: 28rpx;
+  color: #bbb;
+}
+.answer_value{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  color: #000;
+  margin-top: 5px;
+}

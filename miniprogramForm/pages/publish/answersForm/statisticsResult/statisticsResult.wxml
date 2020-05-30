@@ -1,0 +1,117 @@
+<view class="container">
+	<view class="header_Nav">
+		<text wx:for="{{header_NavBar}}" data-idx="{{index}}" class="item{{currentTab==index?'Active':''}}" wx:key="unique" bindtap="navBarTap">{{item}}</text>
+	</view>
+</view>
+<!-- 统计结果start -->
+<view wx:if="{{currentTab==0}}" class="table">
+	<text class="totalAnswers">共收集{{formAnswers}}份表单</text>
+	<!-- 填空题 -->
+	<view wx:if="{{gapFilling}}" class="answerItem">
+		<block wx:for="{{gapFilling}}" wx:for-item="formItem" wx:for-index="key" wx:key="unique" class="answerItem">
+			<view class="answerTitle">{{key}}</view>
+			<view class="table-tr">
+				<view class="table-th">说明</view>
+				<view class="table-th">内容</view>
+			</view>
+			<block wx:for="{{formItem}}">
+				<view class="table-tr">
+					<view class="table-td">填空统计</view>
+					<view class="table-td">{{item}}</view>
+				</view>
+			</block>
+			<view class="crossLine"></view>
+		</block>
+	</view>
+	<!-- 单选或者多选 -->
+	<view wx:for="{{result}}" wx:for-item="formItem" wx:for-index="key" class="answerItem">
+		<view class="answerTitle">{{key}}</view>
+		<view class="table-tr">
+			<view class="table-th">选项</view>
+			<view class="table-th">小计</view>
+			<view class="table-th">比例</view>
+		</view>
+		<block wx:for="{{formItem}}" wx:for-index="options">
+			<view class="table-tr">
+				<view class="table-td">{{options}}</view>
+				<view class="table-td">{{item}}人</view>
+				<view class="table-td">{{100*item/formAnswers}}%</view>
+			</view>
+		</block>
+		<view class="crossLine"></view>
+	</view>
+
+	<!-- <view wx:for="{{formList}}" wx:for-item="formItem" wx:key='*this' class='param'>
+		<view wx:if="{{formItem.type==='gapFilling'}}" class="formItem">
+			<view class='answerTitle'>{{formItem.inputTitle}}</view>
+			<view class="table-tr">
+				<view class="table-th">序号</view>
+				<view class="table-th">内容</view>
+			</view>
+			<block wx:for="{{form.SubmitContent}}" wx:for-index="key" wx:key="unique">
+				<view class="table-tr">
+					<view class="table-td">xuhao</view>
+					<view class="table-td" wx:if="{{key}}=={{formItem.inputTitle}}">{{item}}</view>
+				</view>
+			</block>
+		</view>
+		<view wx:elif="{{formItem.type==='radioButton'}}" class="formItem">
+			<view class='answerTitle'>{{formItem.inputTitle}}</view>
+			<view class="table-tr">
+				<view class="table-th">选项</view>
+				<view class="table-th">小计</view>
+				<view class="table-th">比例</view>
+			</view>
+			<block wx:for="{{formItem.otherInfo}}" wx:key="id">
+				<view class="table-tr">
+					<view class="table-td">{{item}}</view>
+					<view class="table-td">{{}}选择该选项的人数</view>
+					<view class="table-td">再此计算比例</view>
+				</view>
+			</block>
+		</view>
+		<view wx:else class="formItem">
+			<view class='answerTitle'>{{formItem.inputTitle}}</view>
+			<view class="table-tr">
+				<view class="table-th">选项</view>
+				<view class="table-th">小计</view>
+				<view class="table-th">比例</view>
+			</view>
+			<block wx:for="{{formItem.otherInfo}}" wx:key="id">
+				<view class="table-tr">
+					<view class="table-td">{{item}}</view>
+					<view class="table-td">{{}}选择该选项的人数</view>
+					<view class="table-td">再此计算比例</view>
+				</view>
+			</block>
+		</view>
+	</view> -->
+</view>
+<!-- 统计结果 end-->
+
+
+<!-- 答卷详情 start-->
+<view wx:elif="{{currentTab}}==1">
+	<view wx:if="{{form}}">
+		<block wx:for="{{form}}">
+			<view class="info">第{{index+1}}份/共{{form.length}}份</view>
+			<block wx:for="{{item.SubmitContent}}" wx:for-index="key" wx:key="unique">
+				<view class="section">
+					<view class="answer_title">{{key}}</view>
+					<view class="answer_value">{{item}}</view>
+				</view>
+			</block>
+			<view class="answerPartLine"></view>
+		</block>
+	</view>
+	<view wx:else>暂无答卷详情</view>
+</view>
+<!-- 答卷详情 end-->
+<!-- <view wx:elif="{{currentTab}}==1">
+  <block wx:for="{{formSubmitContent}}" wx:for-index="key" wx:key="unique">
+	  <view class="section">
+				<view class="answer_title">{{key}}</view>
+				<view class="answer_value">{{item}}</view>
+			</view>
+	</block>
+</view> -->

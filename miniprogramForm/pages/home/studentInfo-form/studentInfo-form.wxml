@@ -1,0 +1,96 @@
+<view class="container">
+	<view class="form-title">
+		<input name="form_title" bindinput="getFormTitle" placeholder="请输入表单名称" focus />
+	</view>
+
+	<!--屏幕背景变暗的背景  -->
+	<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+	<!--弹出框  -->
+	<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+		<!-- 在这里写弹出框里面的布局 -->
+		<view class="dialog_title">添加基础题型</view>
+		<view class="type_container">
+			<view wx:for="{{list}}" wx:key="id" class="dialog_content">
+				<view class="content_item" bindtap="typeClick" data-index="{{index}}">
+					<image src="{{item.src}}"></image>
+					<view>{{item.txt}}</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="dialog_title" style="display:block">添加题目模板</view>
+		<view class="type_container">
+			<view wx:for="{{dialog_item}}" wx:key="id" class="dialog_content">
+				<view class="content_item" bindtap="typeClick" data-index="{{index}}">{{item.txt}}</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 添加下一题 -->
+	<block wx:for="{{form_lists}}">
+		<view wx:if="{{item.type==='gapFilling'}}">
+			<view class="section">
+				<view class="title">
+					<view class="section_title">{{item.inputTitle}}</view>
+					<view bindtap="editFormSection" data-index="{{item.id}}">
+						<image src="../../../images/threePoint.png"></image>
+					</view>
+				</view>
+				<input name="{{item.inputVal}}" placeholder="请输入" />
+			</view>
+		</view>
+		<view wx:elif="{{item.type==='radioButton'}}">
+			<view class="section section_gap">
+				<view class="title">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<view bindtap="editFormSection" data-index="{{item.id}}">
+						<image src="../../../images/threePoint.png"></image>
+					</view>
+				</view>
+				<radio-group name="{{item.inputVal}}">
+					<view wx:for="{{item.otherInfo}}">
+						<label>
+							<radio name="{{item}}" value="{{item}}">{{item}}</radio>
+						</label>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+		<view wx:else>
+			<view class="section section_gap">
+				<view class="title">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<view bindtap="editFormSection" data-index="{{item.id}}">
+						<image src="../../../images/threePoint.png"></image>
+					</view>
+				</view>
+				<checkbox-group name="{{item.inputVal}}">
+					<view wx:for="{{item.otherInfo}}">
+						<label>
+							<checkbox name="{{item}}" value="{{item}}">{{item}}</checkbox>
+						</label>
+					</view>
+				</checkbox-group>
+			</view>
+		</view>
+	</block>
+	<view class="addNewItem">
+		<view class="btn_addItem" bindtap="onAddNew">
+			<image src="../../../images/addLogo.png"></image>
+			<text>添加下一题</text>
+		</view>
+	</view>
+	<!-- start:编辑form的section -->
+	<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+		<block wx:for-items="{{actionSheetItems}}">
+			<action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+		</block>
+		<action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+	</action-sheet>
+	<!-- end:编辑form的section -->
+	<view class="btn-area">
+		<button class="none-btn" bindtap="onAddNew">添加题目</button>
+		<button class="none-btn" bindtap="onPreviewForm">预览</button>
+		<button class="none-btn" bindtap="SubmitForm" style="background:#004aad;color:#fff">提交</button>
+	</view>
+</view>

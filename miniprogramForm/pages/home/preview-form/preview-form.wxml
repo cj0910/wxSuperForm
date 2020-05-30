@@ -1,0 +1,44 @@
+<!--miniprogramForm/pages/home/preview-form/preview-form.wxml-->
+<view class="container">
+
+		<view class="form-title">
+			<input name="form_title" bindinput="getFormTitle" value="{{form_title}}" disabled="true" />
+		</view>
+
+		<!-- 添加下一题 -->
+		<block wx:for="{{form_lists}}">
+			<view wx:if="{{item.type==='gapFilling'}}">
+				<view class="section">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<input name="{{item.inputVal}}" placeholder="请输入" />
+				</view>
+			</view>
+			<view wx:elif="{{item.type==='radioButton'}}">
+				<view class="section section_gap">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<radio-group name="{{item.inputVal}}">
+						<view wx:for="{{item.otherInfo}}">
+							<label>
+								<radio name="{{item}}" value="{{item}}">{{item}}</radio>
+							</label>
+						</view>
+					</radio-group>
+				</view>
+			</view>
+			<view wx:else>
+				<view class="section section_gap">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<checkbox-group name="{{item.inputVal}}">
+						<view wx:for="{{item.otherInfo}}">
+							<label>
+								<checkbox name="{{item}}" value="{{item}}">{{item}}</checkbox>
+							</label>
+						</view>
+					</checkbox-group>
+				</view>
+			</view>
+		</block>
+		<view class="btn-area">
+			<button class="none-btn" bindtap="SubmitForm" style="background:#004aad;color:#fff">提交</button>
+		</view>
+</view>

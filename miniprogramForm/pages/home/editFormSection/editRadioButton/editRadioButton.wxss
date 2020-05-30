@@ -1,0 +1,32 @@
+/* miniprogramForm/pages/home/editFormSection/editRadioButton/editRadioButton.wxss */
+page{
+  height: 100%;
+}
+
+.section{
+  width: 100%;
+  margin-bottom: 20rpx;
+  font-size: 35rpx;
+  background-color: #fff;
+  color: #000;
+  /* background: skyblue; */
+}
+.radio_title{
+  padding: 25rpx;
+}
+.radio_content{
+  display: flex;
+  flex-direction: row;
+  padding: 15px 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.txt_radio{
+  padding-left: 40rpx;
+}
+button {
+  font-size: 40rpx;
+  margin-top: 60rpx;
+  background-color: #004aad;
+  color: #fff;
+}

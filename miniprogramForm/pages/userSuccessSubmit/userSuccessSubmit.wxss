@@ -1,0 +1,10 @@
+/* miniprogramForm/pages/userSuccessSubmit/userSuccessSubmit.wxss */
+.txt{
+  text-align: center;
+  margin-top: 8px;
+}
+.returnHome{
+  margin-top: 20px;
+  background-color: #004aad;
+  color: #fff;
+}

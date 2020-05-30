@@ -1,0 +1,89 @@
+<!-- <view class="container">
+
+	<form bindsubmit="formSubmit">
+		<view class="form-title">
+			<input name="form_title" value="{{form_list.formTitle}}" disabled="false" />
+		</view>
+    
+		<block wx:for="{{form_list.form}}" wx:key="unique">
+			<view wx:if="{{item.type==='gapFilling'}}">
+				<view class="section">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<input name="{{item.inputTitle}}" placeholder="请输入" />
+				</view>
+			</view>
+			<view wx:elif="{{item.type==='radioButton'}}">
+				<view class="section section_gap">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<radio-group name="{{item.inputTitle}}">
+						<view wx:for="{{item.otherInfo}}">
+							<label>
+								<radio name="{{item}}" value="{{item}}">{{item}}</radio>
+							</label>
+						</view>
+					</radio-group>
+				</view>
+			</view>
+			<view wx:else>
+				<view class="section section_gap">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<checkbox-group name="{{item.inputTitle}}">
+						<view wx:for="{{item.otherInfo}}">
+							<label>
+								<checkbox name="{{item}}" value="{{item}}">{{item}}</checkbox>
+							</label>
+						</view>
+					</checkbox-group>
+				</view>
+			</view>
+		</block>
+		<view class="btn-area">
+			<button class="none-btn" formType="submit" style="background:#004aad;color:#fff">提交</button>
+		</view>
+	</form>
+</view> -->
+
+<view class="container">
+
+	<form bindsubmit="formSubmit">
+		<view class="form-title">
+			<input name="form_title" value="{{form_list.formTitle}}" disabled="false" />
+		</view>
+    
+		<block wx:for="{{form_list.form}}" wx:key="unique">
+			<view wx:if="{{item.type==='gapFilling'}}">
+				<view class="section">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<input name="{{item.inputTitle}}" placeholder="请输入" />
+				</view>
+			</view>
+			<view wx:elif="{{item.type==='radioButton'}}">
+				<view class="section section_gap">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<radio-group name="{{item.inputTitle}}">
+						<view wx:for="{{item.otherInfo}}">
+							<label>
+								<radio name="{{item}}" value="{{item}}">{{item}}</radio>
+							</label>
+						</view>
+					</radio-group>
+				</view>
+			</view>
+			<view wx:else>
+				<view class="section section_gap">
+					<view class="section__title">{{item.inputTitle}}</view>
+					<checkbox-group name="{{item.inputTitle}}">
+						<view wx:for="{{item.otherInfo}}">
+							<label>
+								<checkbox name="{{item}}" value="{{item}}">{{item}}</checkbox>
+							</label>
+						</view>
+					</checkbox-group>
+				</view>
+			</view>
+		</block>
+		<view class="btn-area">
+			<button class="none-btn" formType="submit" style="background:#004aad;color:#fff">提交</button>
+		</view>
+	</form>
+</view>

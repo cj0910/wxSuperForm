@@ -1,0 +1,64 @@
+<!-- <wxs module="judge" src="../../../utils/judge.wxs"></wxs>
+<view class="container">
+	<view class="form-title">
+		<input name="form_title" value="{{form_title}}" disabled="true" />
+	</view>
+
+	<block wx:for="{{form}}" wx:key='*this' wx:for-item='oneArray'>
+		<view wx:if="{{oneArray.type==='gapFilling'}}">
+			<view class="section">
+				<view class="section__title">{{oneArray.inputTitle}}</view>
+				<input name="{{oneArray.inputVal}}" value="{{judge.getInputValue(oneArray.inputTitle,formSubmitValue)}}" disabled="true" />
+			</view>
+		</view>
+		<view wx:elif="{{oneArray.type==='radioButton'}}">
+			<view class="section section_gap">
+				<view class="section__title">{{oneArray.inputTitle}}</view>
+				<radio-group name="{{oneArray.inputVal}}">
+					<view wx:for="{{oneArray.otherInfo}}">
+						<label>
+							<radio wx:if="{{judge.judgeRadioButton(item,formSubmitValue)}}" name="{{item}}" value="{{item}}" checked disabled> {{item}} </radio>
+							<radio wx:else name="{{item}}" value="{{item}}" disabled> {{item}} </radio>
+						</label>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+		<view wx:else>
+			<view class="section section_gap">
+				<view class="section__title">{{oneArray.inputTitle}}</view>
+				<checkbox-group name="{{oneArray.inputVal}}">
+					<view wx:for="{{oneArray.otherInfo}}">
+						<label>
+							<checkbox name="{{item}}" value="{{item}}">{{item}}</checkbox>
+						</label>
+					</view>
+				</checkbox-group>
+			</view>
+		</view>
+	</block>
+
+	<view class="partingLine">提交答案如下</view>
+	<view>
+		<block wx:for="{{formSubmitValue}}" wx:for-index="key">
+			<view class="section">{{key}}</view>
+			<view>{{item}}</view>
+		</block>
+	</view>
+</view> -->
+
+<view class="container">
+	<view class="form-title">
+		<text>{{form_title}}</text>
+	</view>
+
+	<view class="partingLine">提交答案如下</view>
+	<view>
+		<block wx:for="{{formSubmitValue}}" wx:for-index="key" wx:key="unique">
+			<view class="section">
+				<view class="answer_title">{{key}}</view>
+				<view class="answer_value">{{item}}</view>
+			</view>
+		</block>
+	</view>
+</view>

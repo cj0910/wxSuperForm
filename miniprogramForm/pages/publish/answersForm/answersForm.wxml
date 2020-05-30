@@ -1,0 +1,26 @@
+<!--miniprogramForm/pages/publish/answersForm/answersForm.wxml-->
+<view class="container">
+	<block wx:if="{{ forms.length }}">
+		<block wx:for="{{ forms }}" wx:key="index">
+			<navigator url="statisticsResult/statisticsResult?id={{item._id}}">
+				<view class="forms-item">
+					<view class="form-title"> {{item.formTitle}} </view>
+					<view style="display:flex;flex-direction:row">
+						<view class="form-Info">
+							<view class="date">{{ item.createTime }} 发布</view>
+						</view>
+						<view class="form-Info-right">
+							<view>{{item.formAnswers}}</view>
+							<view class="form-answer">答卷总数</view>
+						</view>
+					</view>
+				</view>
+			</navigator>
+		</block>
+	</block>
+	<block wx:else>
+		<view class="empty">
+			<text class="title">暂无相关记录</text>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,165 @@
+page{
+  height: 100%;
+}
+.container{
+  background-color: #f8f8f8;
+  padding: 10px 5px;
+  margin-bottom: 100rpx;
+}
+/* 问题：设置固定底部的div后会遮挡其他元素
+解决方法:为该固定在底部的div设置一个height，position设置为fixed，然后给body设置一个margin-bottom，大小为该固定在底部的div的height 
+方法一： header设置了position:fixed定位后，下一个div(main)会上移，可以给header部分设置高，然后main设置一个margin-top,可以实现两个div分开，另外设置position:fixed的部分，一定要设置top:0； left:0; 不然会引起margin-top失效。
+方法二： 在设置了fixed的div下再设置一个空的div，设置成你要占据的高度即可。 */
+
+.form-title{
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 10rpx 30rpx 20rpx 20rpx;
+}
+.form-title input{
+  padding: 15px 0px;
+  border-bottom: 0.5px solid #bbb;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title image{
+  width: 20px;
+  height: 15px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15rpx;
+}
+
+.section view {
+  padding-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+.section input{
+  border-bottom: 1px solid #bbb;
+  padding: 10rpx 20rpx 15rpx 20rpx;
+}
+.section radio-group{
+  display: flex;
+  flex-direction: column;
+}
+.section radio-group label{
+  margin-bottom: 8px;
+}
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  padding: 5px 0px;
+  height: 100rpx;
+  width: 100%;
+  border-top: 0.5px solid #ccc;
+}
+
+.none-btn{
+  border: none;
+  outline: none;
+  border-style: none;
+}
+.none-btn::after{
+  border: none;
+}
+
+.addNewItem{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 20rpx 200rpx;
+  border-radius: 10px;
+}
+.btn_addItem{
+  font-size: 30rpx;
+  vertical-align: middle;
+}
+.btn_addItem image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+  padding: 12rpx;
+}
+.btn_addItem text{
+  color: #004aad;
+}
+
+/* dialog start */
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框主题布局 */
+.commodity_attr_box {
+  display: flex;
+  flex-direction: column;
+  /* height: 800rpx; */
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #eee;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+/* 对话框标题 */
+.dialog_title {
+  font-size: 12px;
+  height: 20px;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  color: #bbb;
+}
+
+.dialog_content {
+  /* display: flex; */
+  position: relative;
+  float: left;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  padding: 10px 10px;
+  width: 30%;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+.content_item{
+  text-align: center;
+}
+.content_item image{
+  width: 25px;
+  height: 25px;
+}
+.content_item view{
+  font-size: 15px;
+}
+/* dialog end */

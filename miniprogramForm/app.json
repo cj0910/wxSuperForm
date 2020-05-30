@@ -1,0 +1,62 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/publish/publish",
+    "pages/write/write",
+    "pages/showingForms/showingForms",
+    "pages/home/direction-form/direction-form",
+    "pages/home/newBlank-form/newBlank-form",
+    "pages/home/questionnaire-form/questionnaire-form",
+    "pages/home/activity-form/activity-form",
+    "pages/home/studentInfo-form/studentInfo-form",
+    "pages/home/successCreate/successCreate",
+    "pages/home/addNext-Type/radio_button/radio_button",
+    "pages/home/addNext-Type/gap_filling/gap_filling",
+    "pages/home/addNext-Type/check_box/check_box",
+    "pages/userSuccessSubmit/userSuccessSubmit",
+    "pages/home/preview-form/preview-form",
+    "pages/home/editFormSection/editCheckBox/editCheckBox",
+    "pages/home/editFormSection/editGapFilling/editGapFilling",
+    "pages/home/editFormSection/editRadioButton/editRadioButton",
+    "pages/write/previewWrite/previewWrite",
+    "pages/publish/answersForm/answersForm",
+    "pages/publish/answersForm/statisticsResult/statisticsResult"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "云表单",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#737373",
+    "selectedColor": "#004aad",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/home1.jpg",
+        "selectedIconPath": "/images/home.jpg"
+      },
+      {
+        "pagePath": "pages/write/write",
+        "text": "我填写的",
+        "iconPath": "/images/tianxie1.jpg",
+        "selectedIconPath": "/images/tianxie.jpg"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "我发布的",
+        "iconPath": "/images/fabu1.jpg",
+        "selectedIconPath": "/images/fabu.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+page{
+  background-color: #f8f8f8;
+}
+.header_Nav{
+  font-size: 30rpx;
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #bbbbbb;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+  padding-bottom: 4px;
+}
+
+.header_Nav .itemActive{
+  color: #004aad;
+}
+
+.info{
+  font-size: 10px;
+  text-align: center;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  padding: 15rpx;
+}
+
+.answer_title{
+  font-size: 28rpx;
+  color: #bbb;
+}
+.answer_value{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  color: #000;
+  margin-top: 5px;
+}
+.answerPartLine{
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+.totalAnswers{
+  color: #aaa;
+  margin-bottom: 8px;
+}
+.crossLine{
+  margin: 16px 0px;
+  border-top: 1px solid #ddd;
+}
+/* 表格布局start */
+.answerItem{
+  margin-left: 7px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin: 8px 10px;
+}
+.answerTitle{
+  margin-bottom: 5px;
+  margin-bottom: 8px;
+}
+.table {
+  display: table;
+  width: 100%;
+  /* border-collapse 属性设置表格的边框是否被合并为一个单一的边框，解决相邻单元格边框未合并导致有些边框变粗的视觉效果 */
+  border-collapse: collapse;
+  overflow-x: hidden;
+}
+
+.table-tr {
+  display: table-row;
+  width: 100%;
+  height: 100rpx;
+}
+
+.table-th {
+  display: table-cell;
+  font-weight: bold;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ccc;
+  width: 200rpx;
+}
+
+.table-td {
+  display: table-cell;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 表格布局end */

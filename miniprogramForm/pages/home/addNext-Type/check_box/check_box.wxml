@@ -1,0 +1,22 @@
+<!--pages/home/addNext-Type/check_box/check_box.wxml-->
+<view class="container">
+	<text>标题</text>
+	<view class="section checkBox_title">
+		<input value="{{Radio_Title}}" bindinput="inputCheckBox_Title" placeholder="请输入标题" focus></input>
+	</view>
+	<text>选项</text>
+	<view class="section">
+		<!-- 添加下一个选项 -->
+		<view class="checkBox_content" wx:for="{{array}}">
+			<icon class="remove" type="clear" size="16" data-idx="{{index}}" bindtap="delInput" />
+			<input class="txt_checkBox" data-idx="{{index}}" bindinput="getInputVal" value="{{inputVal[index]}}"></input>
+		</view>
+
+		<view class="checkBox_content" bindtap="addInput">
+			<icon type="success" size="16"/>
+			<text class="txt_checkBox">添加选项</text>
+		</view>
+	</view>
+
+	<button catchtap="add_checkBox">确定</button>
+</view>

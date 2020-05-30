@@ -1,0 +1,22 @@
+<!--pages/home/addNext-Type/radio_button/radio_button.wxml-->
+<view class="container">
+	<text>标题</text>
+	<view class="section radio_title">
+		<input value="{{Radio_Title}}" bindinput="inputRadio_Title" placeholder="请输入标题" focus></input>
+	</view>
+	<text>选项</text>
+	<view class="section">
+		<!-- 添加下一个选项 -->
+		<view class="radio_content" wx:for="{{array}}" wx:key=''>
+			<icon class="remove" type="clear" size="16" data-idx="{{index}}" bindtap="delInput" />
+			<input class="txt_radio" data-idx="{{index}}" bindinput="getInputVal" value="{{inputVal[index]}}"></input>
+		</view>
+
+		<view class="radio_content" bindtap="addInput">
+			<icon type="success" size="16"/>
+			<text class="txt_radio">添加选项</text>
+		</view>
+	</view>
+
+	<button catchtap="add_radioButton">确定</button>
+</view>
